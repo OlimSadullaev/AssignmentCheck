@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmenCheck.API", "AssignmenCheck.API.csproj", "{5AEB1947-EE2D-419D-B572-7480B2441409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmenCheck.API", "AssignmenCheck.API.csproj", "{5AEB1947-EE2D-419D-B572-7480B2441409}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmentCheck.Data", "..\AssignmentCheck.Data\AssignmentCheck.Data.csproj", "{D417992B-7279-407F-AAA0-140F2CED0665}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmentCheck.Service", "..\AssignmentCheck.Service\AssignmentCheck.Service.csproj", "{D9745A9F-F2F4-4B5B-AC3F-05A9C8B86D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5AEB1947-EE2D-419D-B572-7480B2441409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AEB1947-EE2D-419D-B572-7480B2441409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AEB1947-EE2D-419D-B572-7480B2441409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D417992B-7279-407F-AAA0-140F2CED0665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D417992B-7279-407F-AAA0-140F2CED0665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D417992B-7279-407F-AAA0-140F2CED0665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D417992B-7279-407F-AAA0-140F2CED0665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9745A9F-F2F4-4B5B-AC3F-05A9C8B86D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9745A9F-F2F4-4B5B-AC3F-05A9C8B86D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9745A9F-F2F4-4B5B-AC3F-05A9C8B86D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9745A9F-F2F4-4B5B-AC3F-05A9C8B86D76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
