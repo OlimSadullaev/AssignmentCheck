@@ -12,26 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AssignmentCheckDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("AllPolicy", policy => policy.RequireRole(
-        Enum.GetName(UserRole.admin),
-        Enum.GetName(UserRole.teacher),
-        Enum.GetName(UserRole.student)));
-
-    options.AddPolicy("StudentPolicy", policy => policy.RequireRole(
-        Enum.GetName(UserRole.admin),
-        Enum.GetName(UserRole.student)));
-
-    options.AddPolicy("TeacherPolicy", policy => policy.RequireRole(
-        Enum.GetName(UserRole.teacher),
-        Enum.GetName(UserRole.admin)));
-
-    options.AddPolicy("AdminPolicy", policy => policy.RequireRole(
-        Enum.GetName(UserRole.admin)));
-});
+    options.UseNpgsql(builder.Configuration.GetConnectionString("AssignmentCheck")));
 
 builder.Services.AddControllers();
 
@@ -54,25 +35,29 @@ builder.Logging.AddSerilog(logger);
 //builder.Services.AddHttpContextAccessor();
 
 // Convert Api url name to dash case
-builder.Services.AddControllers(options =>
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+/*builder.Services.AddControllers(options =>
 {
     options.Conventions.Add(actionModelConvention: new RouteTokenTransformerConvention(
                                                             new ConfigureApiUrlName()));
-});
+});*/
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
+
 app.UseSwaggerUI();
+
+app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseStaticFiles();
 
 //Set Helpers
 EnvironmentHelper.WebRootPath = app.Services.GetRequiredService<IWebHostEnvironment>()?.WebRootPath;
-
-if(app.Services.GetService<IHttpContextAccessor>() != null)
-    HttpContextHelper.Accessor= app.Services.GetRequiredService<IHttpContextAccessor>();
 
 app.UseHttpsRedirection();
 
