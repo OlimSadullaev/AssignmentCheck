@@ -73,3 +73,7 @@ C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\Assignment
 C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\AssignmentCheck.Data.pdb
 C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\AssignmentCheck.Service.pdb
 C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\AssignmentCheck.Domains.pdb
+C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\user\PPTX\University_CIU\AssignmenCheck.API\bin\Debug\net6.0\System.CodeDom.dll

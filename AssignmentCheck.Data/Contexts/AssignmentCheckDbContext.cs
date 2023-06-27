@@ -1,5 +1,4 @@
 ﻿using AssignmentCheck.Domains.Entities;
-using AssignmentCheck.Domains.Entities.Assignments;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
