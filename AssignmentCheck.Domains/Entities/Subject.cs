@@ -1,5 +1,4 @@
 ﻿using AssignmentCheck.Domains.Commons;
-using AssignmentCheck.Domains.Entities.Assignments;
 using AssignmentCheck.Domains.Enums;
 using System;
 using System.Collections.Generic;
@@ -19,7 +18,7 @@ namespace AssignmentCheck.Domains.Entities
         /*public Guid UserId { get; set; }
         public User User { get; set; }*/
 
-        public Guid AssignmentId { get; set; }
-        public Assignment Assignment { get; set; }
+        /*public Guid AssignmentId { get; set; }
+        public Assignment Assignment { get; set; }*/
     }
 }

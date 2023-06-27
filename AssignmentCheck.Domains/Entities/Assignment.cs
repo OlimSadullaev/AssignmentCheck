@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssignmentCheck.Domains.Entities.Assignments
+namespace AssignmentCheck.Domains.Entities
 {
     public class Assignment : Auditable
     {
