@@ -11,6 +11,7 @@ namespace AssignmentCheck.Api.Controllers
     {
         private readonly IAuthService authService;
         private readonly IUserService userService;
+
         public AuthController(IAuthService authService, IUserService userService)
         {
             this.authService = authService;
