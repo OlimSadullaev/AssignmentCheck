@@ -16,7 +16,7 @@ namespace AssignmentCheck.Service.DTOs
         [Required]
         public string LastName { get; set; }
 
-        [UserLogin, Required]
+        [UserEmail, Required]
         public string Email { get; set; }
 
         [UserPassword, Required]

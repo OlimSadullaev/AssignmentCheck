@@ -12,12 +12,12 @@ namespace AssignmentCheck.Service.Attributes
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if(value is IFormFile file)
+            if (value is IFormFile file)
             {
                 string[] extensions = new string[] { ".zip" };
                 var extension = Path.GetExtension(file.FileName);
 
-                if(!extensions.Contains(extension.ToLower())) 
+                if (!extensions.Contains(extension.ToLower()))
                 {
                     return new ValidationResult("Only ZIP files are allowed!");
                 }

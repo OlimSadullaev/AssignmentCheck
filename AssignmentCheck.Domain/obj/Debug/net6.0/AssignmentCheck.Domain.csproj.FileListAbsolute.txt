@@ -1,0 +1,12 @@
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\bin\Debug\net6.0\AssignmentCheck.Domain.deps.json
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\bin\Debug\net6.0\AssignmentCheck.Domain.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\bin\Debug\net6.0\AssignmentCheck.Domain.pdb
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.csproj.AssemblyReference.cache
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.AssemblyInfoInputs.cache
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.AssemblyInfo.cs
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\refint\AssignmentCheck.Domain.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\AssignmentCheck.Domain.pdb
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Domain\obj\Debug\net6.0\ref\AssignmentCheck.Domain.dll

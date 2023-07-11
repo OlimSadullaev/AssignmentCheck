@@ -10,8 +10,8 @@ namespace AssignmentCheck.Service.Exceptions
     {
         public int Code { get; set; }
 
-        public AssignmentCheckException(int code, string message) : 
-            base(message) =>
+        public AssignmentCheckException(int code, string messege) : 
+            base(messege) =>
             this.Code = code;
     }
 }

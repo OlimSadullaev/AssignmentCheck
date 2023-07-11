@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\AssignmentCheck.Domains.csproj": {
-                "projectPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\AssignmentCheck.Domains.csproj"
+              "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\AssignmentCheck.Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\AssignmentCheck.Domain.csproj"
               }
             }
           }
@@ -50,27 +50,27 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.4, )"
-            },
-            "System.Linq.Expressions": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\AssignmentCheck.Domains.csproj": {
+    "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\AssignmentCheck.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\AssignmentCheck.Domains.csproj",
-        "projectName": "AssignmentCheck.Domains",
-        "projectPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\AssignmentCheck.Domains.csproj",
+        "projectUniqueName": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\AssignmentCheck.Domain.csproj",
+        "projectName": "AssignmentCheck.Domain",
+        "projectPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\AssignmentCheck.Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domains\\obj\\",
+        "outputPath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

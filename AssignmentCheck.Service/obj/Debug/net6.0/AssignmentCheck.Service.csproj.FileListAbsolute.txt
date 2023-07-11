@@ -10,3 +10,8 @@ C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\obj\Debug\net6.0\Assig
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\obj\Debug\net6.0\refint\AssignmentCheck.Service.dll
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\obj\Debug\net6.0\AssignmentCheck.Service.pdb
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\obj\Debug\net6.0\ref\AssignmentCheck.Service.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\bin\Debug\net6.0\AssignmentCheck.Data.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\bin\Debug\net6.0\AssignmentCheck.Domain.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\bin\Debug\net6.0\AssignmentCheck.Data.pdb
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\bin\Debug\net6.0\AssignmentCheck.Domain.pdb
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Service\obj\Debug\net6.0\AssignmentCheck.Service.csproj.CopyComplete
