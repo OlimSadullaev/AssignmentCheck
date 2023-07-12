@@ -17,6 +17,7 @@ namespace AssignmentCheck.Service.DTOs
         public string LastName { get; set; }
 
         [UserEmail, Required]
+        [EmailAddress(ErrorMessage = "The field Email is invalid.")]
         public string Email { get; set; }
 
         [UserPassword, Required]

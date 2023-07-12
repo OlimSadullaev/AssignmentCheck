@@ -9,10 +9,10 @@ namespace AssignmentCheck.Service.Extensions
 {
     public static class CollectionExtension
     {
-        public static IQueryable<T> ToPagedList<T>(this IQueryable<T> source, PaginationParams @params)
+        public static IQueryable<T> ToPagedList<T>(this IQueryable<T> source, PaginationParams @object)
         {
-            return @params.PageIndex > 0 && @params.PageSize >= 0
-                ? source.Take(((@params.PageIndex - 1) * @params.PageSize)..@params.PageSize)
+            return @object.PageIndex > 0 && @object.PageSize >= 0
+                ? source.Skip((@object.PageIndex - 1) * @object.PageSize).Take(@object.PageSize)
                 : source;
         }
     }
