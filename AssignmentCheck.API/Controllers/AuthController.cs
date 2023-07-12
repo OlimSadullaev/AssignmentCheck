@@ -21,8 +21,9 @@ namespace AssignmentCheck.Api.Controllers
         /// <summary>
         /// Authorization
         /// </summary>
-        /// <param name="dto"></param>
+        /// <param name="userForLoginDTO"></param>
         /// <returns></returns>
+        
         [HttpPost("login")]
         public async ValueTask<IActionResult> Login(UserForLoginDTO userForLoginDTO)
         {

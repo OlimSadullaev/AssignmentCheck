@@ -1,4 +1,5 @@
 ﻿using AssignmentCheck.Api.Helpers;
+using AssignmentCheck.Domain.Configurations;
 using AssignmentCheck.Domain.Enums;
 using AssignmentCheck.Service.DTOs;
 using AssignmentCheck.Service.Helpers;
@@ -36,6 +37,10 @@ namespace AssignmentCheck.Api.Controllers
         [HttpPatch("Password"), Authorize(Roles = CustomRoles.USER_ROLE)]    
         public async ValueTask<IActionResult> ChangePasswordAsync(string oldPassword, string newPassword)
             => Ok(await userService.ChangePasswordAsync(oldPassword, newPassword));
+
+        /*[HttpGet, Authorize(Roles = CustomRoles.ADMIN_ROLE)]
+        public async ValueTask<IActionResult> GetAllAsync([FromQuery] PaginationParams @object)
+            => Ok(await userService.GetAllAsync(@object));*/
 
         [HttpGet("{id}/Admin"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
         public async ValueTask<IActionResult> GetAsync([FromRoute] Guid id)

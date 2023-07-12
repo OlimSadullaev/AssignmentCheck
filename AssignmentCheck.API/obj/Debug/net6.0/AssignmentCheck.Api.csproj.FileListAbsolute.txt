@@ -129,3 +129,4 @@ C:\Users\user\PPTX\University_CIU\AssignmentCheck.Api\bin\Debug\net6.0\Mapster.d
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Api\bin\Debug\net6.0\Mapster.Core.dll
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\PPTX\University_CIU\AssignmentCheck.Api\bin\Debug\net6.0\Serilog.dll
+C:\Users\user\PPTX\University_CIU\AssignmentCheck.Api\bin\Debug\net6.0\Newtonsoft.Json.dll

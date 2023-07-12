@@ -47,7 +47,8 @@ namespace AssignmentCheck.Service.Services
                 }),
                 Expires = DateTime.UtcNow.AddMonths(int.Parse(configuration["JWT:lifetime"])),
                 Issuer = configuration["JWT:Issuer"],
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), 
+                                         SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescription);
 

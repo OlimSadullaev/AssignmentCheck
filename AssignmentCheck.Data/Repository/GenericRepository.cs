@@ -8,18 +8,12 @@ namespace AssignmentCheck.Data.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly AssignmentCheckDbContext dbContext;
-
         private readonly DbSet<T> dbSet;
 
         public GenericRepository(AssignmentCheckDbContext dbContext)
         {
             this.dbContext = dbContext;
-        }
-
-        public GenericRepository(AssignmentCheckDbContext dbContext, DbSet<T> dbSet)
-        {
-            this.dbContext = dbContext;
-            this.dbSet = dbSet;
+            this.dbSet = dbContext.Set<T>();
         }
 
         public async ValueTask<T> CreateAsync(T entity) =>
