@@ -1,4 +1,5 @@
 ﻿using AssignmentCheck.Data.IRepository;
+using AssignmentCheck.Domain.Configurations;
 using AssignmentCheck.Domain.Entities;
 using AssignmentCheck.Domain.Enums;
 using AssignmentCheck.Service.Attributes;
@@ -8,6 +9,7 @@ using AssignmentCheck.Service.Extensions;
 using AssignmentCheck.Service.Helpers;
 using AssignmentCheck.Service.Interfaces;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
@@ -82,10 +84,11 @@ namespace AssignmentCheck.Service.Services
             return true;
         }
 
-        public async ValueTask<IEnumerable<UserForViewDTO>> GetAll(Expression<Func<User, bool>> expression)
+        public async ValueTask<IEnumerable<UserForViewDTO>> GetAllAsync(PaginationParams @object, Expression<Func<User, bool>> expression)
         {
+            var users = unitOfWork.Users.GetAll(expression: expression, isTracing: false);
 
-            throw new NotImplementedException(); // implement
+            return (await users.ToPagedList(@object).ToListAsync()).Adapt<List<UserForViewDTO>>();
         }
 
         public async ValueTask<UserForViewDTO> GetAsync(Expression<Func<User, bool>> expression)

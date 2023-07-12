@@ -48,15 +48,14 @@ namespace AssignmentCheck.Service.Services
             return true;
         }
 
-        public async ValueTask<IEnumerable<Subject>> GetAllAsync(PaginationParams @params = null, Expression<Func<Subject, bool>> expression = null)
+        public async ValueTask<IEnumerable<Subject>> GetAllAsync(PaginationParams @object = null, Expression<Func<Subject, bool>> expression = null)
         {
-            throw new NotImplementedException();
-            /*var subjects = unitOfWork.Subjects.GetAll(expression, new string[] { "Assignment" }, false);
+            var subjects = unitOfWork.Subjects.GetAll(expression, new string[] { "Assignment" }, false);
+            
+            if(@object != null)
+                return await subjects.ToPagedList(@object).ToListAsync();
 
-            if (@params != null)
-                return await subjects.ToPagedList(@params.Adapt<>).ToList();
-
-            return subjects.ToListAsync();*/
+            return await subjects.ToListAsync();
         }
 
         /*public ValueTask<IEnumerable<SubjectForCreationDTO>> GetAll(Expression<Func<Subject, bool>> expression)

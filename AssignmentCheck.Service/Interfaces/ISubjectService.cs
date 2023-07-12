@@ -16,7 +16,7 @@ namespace AssignmentCheck.Service.Interfaces
         ValueTask<Subject> UpdateAsync(Guid Id, SubjectForCreationDTO subjectForCreationDTO);
         ValueTask<bool> DeleteAsync(Expression<Func<Subject, bool>> expression);
         ValueTask<IEnumerable<Subject>> GetAllAsync(
-            PaginationParams @params = null, 
+            PaginationParams @object = null, 
             Expression<Func<Subject, bool>> expression = null);
         ValueTask<Subject> GetAsync(Expression<Func<Subject, bool>> expression);
     }
