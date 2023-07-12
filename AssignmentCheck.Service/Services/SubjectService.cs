@@ -58,24 +58,6 @@ namespace AssignmentCheck.Service.Services
             return await subjects.ToListAsync();
         }
 
-        /*public ValueTask<IEnumerable<SubjectForCreationDTO>> GetAll(Expression<Func<Subject, bool>> expression)
-        {
-            var subjectRepository = unitOfWork.Subjects;
-
-            var subjects = subjectRepository.GetAll(expression);
-
-            //SubjectForCreationDTO subjectForCreationDTO = new SubjectForCreationDTO();
-
-            var subjectDTOs = subjects.Select(s => new SubjectForCreationDTO
-            {
-                Name = s.Name,
-                Description = s.Description,
-                // Map other properties as needed
-            });
-
-            return subjectDTOs.ToList();
-        }*/
-
         public async ValueTask<Subject> GetAsync(Expression<Func<Subject, bool>> expression) =>
             await unitOfWork.Subjects.GetAsync(expression, new string[] { "Assignment" }) ??
                 throw new AssignmentCheckException(404, "Subject not found");

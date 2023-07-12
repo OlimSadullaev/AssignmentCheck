@@ -20,7 +20,6 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
-
 // Add services to the container.  AssignmentCheck
 builder.Services.AddControllers();
 

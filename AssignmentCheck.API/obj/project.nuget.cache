@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AOA8iVElXdXwQQ10jQ+Kt3NSJRW6MmyjE1fdqF4qBKYa3QNX3eGiA3t6Wl7+mQ/D576HzFb7dOf+SivUmOL+YA==",
+  "dgSpecHash": "RrtqDjvnpFQiekjzzE2yekun+HnlXvHtOuxO0tR/kXkNZyr6ljzhZCrcV5LSXilVLSorFH9k/LeENEqQbzS7Uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\PPTX\\University_CIU\\AssignmentCheck.Api\\AssignmentCheck.Api.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\npgsql\\7.0.4\\npgsql.7.0.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.4\\npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\serilog\\3.0.1\\serilog.3.0.1.nupkg.sha512",
