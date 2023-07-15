@@ -21,33 +21,34 @@ namespace AssignmentCheck.Api.Controllers
         {
             this.userService = userService;
         }
+
         [HttpPut, Authorize(Roles = CustomRoles.USER_ROLE)]
         public async ValueTask<IActionResult> UpdateAsync( [Required] string password, [FromQuery] UserForUpdateDTO userForUpdateDTO)
             => Ok(await userService.UpdateAsync(password, userForUpdateDTO));
 
-        [HttpPatch("{id}"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
+        [HttpPatch("Password"), Authorize(Roles = CustomRoles.USER_ROLE)]    
+        public async ValueTask<IActionResult> ChangePasswordAsync(string oldPassword, string newPassword)
+            => Ok(await userService.ChangePasswordAsync(oldPassword, newPassword));
+
+        [HttpGet("{id}/Admin"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
+        public async ValueTask<IActionResult> GetAsync([FromRoute] Guid id)
+            => Ok(await userService.GetAsync(u => u.Id == id));
+
+        /*[HttpPatch("{id}"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
         public async ValueTask<IActionResult> ChangeRoleAsync(Guid? id, UserRole userRole)
         {
             if (!id.HasValue)
                 id = Guid.NewGuid();
 
             return Ok(await userService.ChangeRoleAsync(id.Value, userRole));
-        }
-
-        [HttpPatch("Password"), Authorize(Roles = CustomRoles.USER_ROLE)]    
-        public async ValueTask<IActionResult> ChangePasswordAsync(string oldPassword, string newPassword)
-            => Ok(await userService.ChangePasswordAsync(oldPassword, newPassword));
+        }*/
 
         /*[HttpGet, Authorize(Roles = CustomRoles.ADMIN_ROLE)]
         public async ValueTask<IActionResult> GetAllAsync([FromQuery] PaginationParams @object)
             => Ok(await userService.GetAllAsync(@object));*/
 
-        [HttpGet("{id}/Admin"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
-        public async ValueTask<IActionResult> GetAsync([FromRoute] Guid id)
-            => Ok(await userService.GetAsync(u => u.Id == id));
-
-        [HttpGet("User"), Authorize(Roles = CustomRoles.USER_ROLE)]
+        /*[HttpGet("User"), Authorize(Roles = CustomRoles.USER_ROLE)]
         public async ValueTask<IActionResult> GetAsync()
-            => Ok(await userService.GetAsync(u => u.Id == HttpContextHelper.UserId));
+            => Ok(await userService.GetAsync(u => u.Id == HttpContextHelper.UserId));*/
     }
 }

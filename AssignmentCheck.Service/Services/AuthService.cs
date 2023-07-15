@@ -26,7 +26,7 @@ namespace AssignmentCheck.Service.Services
             this.configuration = configuration;
         }
 
-        public async ValueTask<string> GenerateToken(string email, string password)
+        public async Task<string> GenerateTokenAsync(string email, string password)
         {
             User user = await unitOfWork.Users.GetAsync(u =>
                 u.Email == email && u.Password.Equals(password.Encrypt()));
@@ -34,11 +34,11 @@ namespace AssignmentCheck.Service.Services
             if (user is null)
                 throw new AssignmentCheckException(400, "Email or Password is incorrect");
 
-            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            var tokenHandler = new JwtSecurityTokenHandler();
 
-            byte[] tokenKey = Encoding.UTF8.GetBytes(configuration["JWK:Key"]);
+            byte[] tokenKey = Encoding.UTF8.GetBytes(configuration["JWT:Key"]);
 
-            SecurityTokenDescriptor tokenDescription = new SecurityTokenDescriptor
+            var tokenDescription = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {

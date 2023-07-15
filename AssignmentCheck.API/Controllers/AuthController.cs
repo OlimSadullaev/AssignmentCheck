@@ -27,7 +27,7 @@ namespace AssignmentCheck.Api.Controllers
         [HttpPost("login")]
         public async ValueTask<IActionResult> Login(UserForLoginDTO userForLoginDTO)
         {
-            var token = await authService.GenerateToken(userForLoginDTO.Email, userForLoginDTO.Password);
+            var token = await authService.GenerateTokenAsync(userForLoginDTO.Email, userForLoginDTO.Password);
             return Ok(new
             {
                 token 
