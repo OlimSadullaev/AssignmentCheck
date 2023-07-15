@@ -101,7 +101,7 @@ namespace AssignmentCheck.Service.Services
             return user.Adapt<UserForViewDTO>();
         }
 
-        public async ValueTask<UserForViewDTO> UpdateAsync(string email, string pasword, UserForUpdateDTO userForUpdateDTO)
+        public async ValueTask<UserForViewDTO> UpdateAsync(string pasword, UserForUpdateDTO userForUpdateDTO)
         {
             var alreadyExistUser = await unitOfWork.Users.GetAsync(u => u.Email == userForUpdateDTO.Email && 
                                                                         u.Id != HttpContextHelper.UserId);
@@ -109,7 +109,7 @@ namespace AssignmentCheck.Service.Services
             if (alreadyExistUser != null)
                 throw new AssignmentCheckException(404, "User with such email already exists.");
 
-            var existsUser = await GetAsync(u => u.Email == email && u.Password == pasword.Encrypt());
+            var existsUser = await GetAsync(/*u => u.Email == email &&*/u => u.Password == pasword.Encrypt());
 
             if(existsUser == null)
                 throw new AssignmentCheckException(404, "Email or Password incorrect.");

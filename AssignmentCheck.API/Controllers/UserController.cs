@@ -22,8 +22,8 @@ namespace AssignmentCheck.Api.Controllers
             this.userService = userService;
         }
         [HttpPut, Authorize(Roles = CustomRoles.USER_ROLE)]
-        public async ValueTask<IActionResult> UpdateAsync([Required] string email, [Required] string password, [FromQuery] UserForUpdateDTO userForUpdateDTO)
-            => Ok(await userService.UpdateAsync(email, password, userForUpdateDTO));
+        public async ValueTask<IActionResult> UpdateAsync( [Required] string password, [FromQuery] UserForUpdateDTO userForUpdateDTO)
+            => Ok(await userService.UpdateAsync(password, userForUpdateDTO));
 
         [HttpPatch("{id}"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
         public async ValueTask<IActionResult> ChangeRoleAsync(Guid? id, UserRole userRole)

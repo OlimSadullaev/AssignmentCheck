@@ -15,7 +15,7 @@ namespace AssignmentCheck.Service.Interfaces
     public interface IUserService
     {
         ValueTask<UserForViewDTO> CreateAsync(UserForCreationDTO userForCreationDTO);
-        ValueTask<UserForViewDTO> UpdateAsync(string email, string pasword, UserForUpdateDTO userForUpdateDTO);
+        ValueTask<UserForViewDTO> UpdateAsync(string pasword, UserForUpdateDTO userForUpdateDTO);
         ValueTask<bool> DeleteAsync(Expression<Func<User, bool>> expression);
         ValueTask<IEnumerable<UserForViewDTO>> GetAllAsync(PaginationParams @object, 
                                                       Expression<Func<User, bool>> expression);
