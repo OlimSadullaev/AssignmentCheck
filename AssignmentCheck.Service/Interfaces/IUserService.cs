@@ -22,5 +22,6 @@ namespace AssignmentCheck.Service.Interfaces
         ValueTask<UserForViewDTO> GetAsync(Expression<Func<User, bool>> expression);
         ValueTask<bool> ChangeRoleAsync(Guid id, UserRole userRole);
         ValueTask<bool> ChangePasswordAsync(string oldPassword, [UserPassword] string newPassword);
+        Task<Guid?> GetUserIdByEmail(string email);
     }
 }

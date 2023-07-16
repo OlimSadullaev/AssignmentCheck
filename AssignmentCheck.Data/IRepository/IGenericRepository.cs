@@ -16,5 +16,6 @@ namespace AssignmentCheck.Data.IRepository
         IQueryable<T> GetAll(Expression<Func<T, bool>> expression,
             string[] includes = null,
             bool isTracing = true);
+        Task<Guid> GetUserByEmail(string email);
     }
 }

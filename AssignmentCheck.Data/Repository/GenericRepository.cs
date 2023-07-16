@@ -52,6 +52,11 @@ namespace AssignmentCheck.Data.Repository
         public async ValueTask<T> GetAsync(Expression<Func<T, bool>> expression, string[] includes = null) =>
             await GetAll(expression, includes).FirstOrDefaultAsync();
 
+        public Task<Guid> GetUserByEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public T Update(T entity) =>
             dbSet.Update(entity).Entity;
     }

@@ -48,7 +48,9 @@ namespace AssignmentCheck.Service.Services
             return true;
         }
 
-        public async ValueTask<IEnumerable<Subject>> GetAllAsync(PaginationParams @object = null, Expression<Func<Subject, bool>> expression = null)
+        public async ValueTask<IEnumerable<Subject>> GetAllAsync
+            (PaginationParams @object = null, 
+            Expression<Func<Subject, bool>> expression = null)
         {
             var subjects = unitOfWork.Subjects.GetAll(expression, new string[] { "Assignment" }, false);
             

@@ -9,7 +9,10 @@ namespace AssignmentCheck.Service.DTOs
 {
     public class SubjectForCreationDTO
     {
+        [Required]
         public string Name { get; set; }
+
+        [Required]
         public string Description { get; set; }
     }
 }

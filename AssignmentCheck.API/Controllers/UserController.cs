@@ -34,14 +34,16 @@ namespace AssignmentCheck.Api.Controllers
         public async ValueTask<IActionResult> GetAsync([FromRoute] Guid id)
             => Ok(await userService.GetAsync(u => u.Id == id));
 
-        /*[HttpPatch("{id}"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
-        public async ValueTask<IActionResult> ChangeRoleAsync(Guid? id, UserRole userRole)
+        [HttpPatch("{id}"), Authorize(Roles = CustomRoles.ADMIN_ROLE)]
+        public async ValueTask<IActionResult> ChangeRoleAsync(string email, UserRole userRole)
         {
+            Guid? id = await userService.GetUserIdByEmail(email);
+
             if (!id.HasValue)
                 id = Guid.NewGuid();
 
             return Ok(await userService.ChangeRoleAsync(id.Value, userRole));
-        }*/
+        }
 
         /*[HttpGet, Authorize(Roles = CustomRoles.ADMIN_ROLE)]
         public async ValueTask<IActionResult> GetAllAsync([FromQuery] PaginationParams @object)

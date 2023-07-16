@@ -25,14 +25,22 @@ namespace AssignmentCheck.Api.Controllers
         /// <returns></returns>
         
         [HttpPost("login")]
-        public async ValueTask<IActionResult> Login(UserForLoginDTO userForLoginDTO)
+        public async ValueTask<IActionResult> Login(string email, string password)
+        {
+            var token = await authService.GenerateTokenAsync(email, password);
+            return Ok(new
+            {
+                token
+            });
+        }
+        /*public async ValueTask<IActionResult> Login(UserForLoginDTO userForLoginDTO)
         {
             var token = await authService.GenerateTokenAsync(userForLoginDTO.Email, userForLoginDTO.Password);
             return Ok(new
             {
                 token 
             });
-        }
+        }*/
 
         [HttpPost("register")]
         public async ValueTask<IActionResult> RegistedAsync(UserForCreationDTO userForCreationDTO)

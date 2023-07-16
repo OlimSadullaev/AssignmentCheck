@@ -122,5 +122,20 @@ namespace AssignmentCheck.Service.Services
             await unitOfWork.SaveChangesAsync();
             return user.Adapt<UserForViewDTO>();
         }
+
+        public async Task<Guid?> GetUserIdByEmail(string email)
+        {
+            // Assuming you have a user repository or data access layer
+            // that provides access to the user data
+            var user = await unitOfWork.Users.GetUserByEmail(email);
+
+            // Check if the user exists
+            if (user != null)
+            {
+                return user; // Return the user ID
+            }
+
+            return null; // User not found, return null
+        }
     }
 }
