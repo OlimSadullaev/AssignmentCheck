@@ -67,7 +67,7 @@ namespace AssignmentCheck.Service.Services
         public async ValueTask<Subject> UpdateAsync(Guid id, SubjectForCreationDTO subjectForCreationDTO)
         {
             var alreadyExists = await unitOfWork.Subjects.GetAsync(
-                s => s.Name == subjectForCreationDTO.Name && s.Id != id);
+                s => s.Name == s.Name && s.Id != id);
 
             if (alreadyExists != null)
                 throw new AssignmentCheckException(400, "Subject with such a name already exists");
